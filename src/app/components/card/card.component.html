@@ -1,0 +1,21 @@
+<div class="card" [class]="card.status">
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ card.patient_name }}
+        </h5>
+        <div class="card-text">
+        <ul *ngIf="card.arrhythmias.length">
+            <li *ngFor="let arrhythmias of card.arrhythmias; let i = index;">
+                {{ card.arrhythmias[i] }}
+            </li>
+        </ul>
+        <div>
+            <i>Created:</i> {{ card.created_date | date: 'short'}}
+            <span *ngIf="card.status !== 'PENDING'">, <span class="status">{{ card.status | lowercase }}</span></span>
+        </div>
+        <button class="btn" [class]="card.status" type="button" (click)="card.status = card.status === 'DONE'? 'REJECTED': 'DONE'">
+            {{ card.status === "DONE"? "Reject": "Valid" }}
+        </button>
+        </div>
+    </div>
+</div>

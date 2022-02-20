@@ -1,0 +1,21 @@
+@import './variables';
+
+.card {
+    margin-bottom: 2px;
+}
+div.DONE .status{
+    color: $my-green;
+    font-weight: bold;
+}
+div.REJECTED .status{
+    color: $my-red;
+    font-weight: bold;
+}
+button.DONE {
+    background-color: $my-red;
+    color: white;
+}
+button.PENDING, button.REJECTED {
+    background-color: $my-green;
+    color: white;
+}
