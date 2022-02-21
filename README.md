@@ -1,10 +1,10 @@
 # Cards
 
-A card triage page with Angular
+A card triage page with Angular (@angular/cli 11.2.18)
 
 See instructions https://github.com/CardioLogs/card-triage
 
-Remarks:
+# My Remarks
 
 * I did that in 4.5 hours
 * I am using bootstrap
@@ -19,3 +19,11 @@ Remarks:
   - I never wrote unittests with angular. I would like to learn.
   - Missing overflow: hidden on both columns.
   - Otherwise, I think I did all the requirements. I like typescript, so it was not a problem for me. Conclusion: it was fun. Angular is fun to work with.
+
+# Setup
+* To install: npm install
+* Run ng serve for a dev server. Navigate to http://localhost:4200/
+* For the server, see instructions and download in the link at the top. Run npm run api
+
+# Screenshot
+![screenshot](https://github.com/sylvieg/cards/blob/master/src/assets/capture.jpg)
