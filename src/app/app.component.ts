@@ -10,6 +10,8 @@ import { CardsService } from 'src/app/services/cards.service';
 export class AppComponent {
   cards: Card[] = [];
   filter: string = ''; // doing only one filter as probabilty patient name = arrhythmia is small
+  error: string = '';
+  isFetching: boolean = false;
 
   constructor (
     private cardsService: CardsService,
@@ -17,7 +19,14 @@ export class AppComponent {
   }
   ngOnInit(): void {
     // this.cards = this.cardsService.getCards(); // DEBUG
-    this.cardsService.getCardsObservable().subscribe( cards => this.cards = cards);
+    this.isFetching = true;
+    this.cardsService.getCardsObservable().subscribe( cards => {
+      this.isFetching = false;
+      this.cards = cards
+    }, error => {
+      this.isFetching = false;
+      this.error = error.message;
+    });
   }
   
   // is a card ok against column and filter

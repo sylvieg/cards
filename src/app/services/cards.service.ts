@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Card } from '../interfaces/card';
 import { CARDS } from '../mockup/cards';
 
@@ -23,8 +24,7 @@ export class CardsService {
         const url = "http://localhost:3000/cards";
         const headers = new HttpHeaders({ Accept: 'application/json'});
         return this.http
-            .get<any> (url, {headers})
-            // .pipe(tap(data => console.log(data));
-            // .pipe(catchError);
+            .get<any> (url, {headers});
     }
+
 }
