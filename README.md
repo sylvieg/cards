@@ -1,27 +1,21 @@
 # Cards
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+A card triage page with Angular
 
-## Development server
+See instructions https://github.com/CardioLogs/card-triage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Remarks:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* I did that in 4.5 hours
+* I am using bootstrap
+  - Bootstrap is helpful and simple for designing something clean at low cost and with documentation! I think documentation is my main reason to use bootstrap. A team can work with the same look and feel with a good documentation.
+  - I used flex - was not really needed there - I am just used to it - same reason, it is clean and documented
+* I am using sass
+  - Mainly for the colors and fonts. I do not do a project anymore without a centralized source for colors and font to have consistency in the all project.
+* I am not sure about the filter feature: in the instructions, it is patient name AND arrythmias. The arrow in the mockup seems to suggest a choice. I did a search on string on both. Perhaps a second version of the instructions ;-). This choice does not scaled. In a real project I will do something like typeahead.
+* My own feedback: I could have fix all of these points with more time
+  - My design is not sexy - just bootstrap... I wanted to do an accordeon on the done column - with by default all close. Because in a done column we do not need the details.
+  - I did not do the error handling in the service. oops
+  - I never wrote unittests with angular. I would like to learn.
+  - Missing overflow: hidden on both columns.
+  - Otherwise, I think I did all the requirements. I like typescript, so it was not a problem for me. Conclusion: it was fun. Angular is fun to work with.
